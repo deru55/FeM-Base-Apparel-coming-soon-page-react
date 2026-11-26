@@ -36,7 +36,7 @@
   grid-area: 1 / 1 / 2 / -1;
 }
 .form__email-input::placeholder {
-  color: var(var(--_pink-400));
+  color: var(--_pink-400);
   opacity: 0.8;
 }
 .form__email-input:focus-visible,

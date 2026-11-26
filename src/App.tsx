@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 import Logo from "./components/Logo/Logo";
 import HeroImage from "./components/HeroImage/HeroImage";
 import EmailForm from "./components/EmailForm/EmailForm";

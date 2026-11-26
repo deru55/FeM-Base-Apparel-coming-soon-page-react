@@ -94,3 +94,10 @@ body {
 
   background: var(--_gradient-light);
 }
+
+@media screen and (min-width: 768px) {
+  body {
+    font-size: var(--_fs-base);
+    text-align: initial;
+  }
+}

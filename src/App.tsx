@@ -9,7 +9,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <header>
+      <header className="header">
         <Logo />
       </header>
 

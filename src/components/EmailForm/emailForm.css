@@ -1,0 +1,83 @@
+.form {
+  margin-top: var(--_space-4);
+}
+
+.form__field {
+  --_icon-arrow-width: 12px;
+  --_icon-error-width: 24px;
+  --_input-padding: clamp(0.75rem, 0.464rem + 0.595vw, 1rem) var(--_space-6);
+  --_input-radius: var(--_radius-full);
+  --_btn-padding-x: clamp(var(--_space-6), -0.214rem + 3.571vw, var(--_space-12));
+  --_icon-error-margin-x: var(--_space-4);
+
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+}
+.form__field.is-invalid input {
+  --input-border: 2px solid var(--_red-500);
+
+  border-width: 2px;
+}
+.form__field.is-invalid .form__error-icon,
+.form__field.is-invalid .form__error-msg {
+  display: block;
+}
+
+.form__email-input {
+  --input-border: 1px solid var(--_pink-400);
+
+  width: 100%;
+  padding: var(--_input-padding);
+  padding-right: calc((var(--_icon-arrow-width) + (var(--_btn-padding-x) * 2)) + (var(--_icon-error-width) + (var(--_icon-error-margin-x) * 2)));
+
+  border: var(--input-border);
+  border-radius: var(--_input-radius);
+
+  grid-area: 1 / 1 / 2 / -1;
+}
+.form__email-input::placeholder {
+  color: var(var(--_pink-400));
+  opacity: 0.8;
+}
+.form__email-input:focus-visible,
+.form__submit-btn:focus-visible {
+  outline: 2px solid var(--_gray-900);
+  outline-offset: 2px;
+}
+
+.form__error-icon {
+  margin-inline: var(--_icon-error-margin-x);
+
+  display: none;
+
+  grid-area: 1 / 2 / 2 / 3;
+  align-self: center;
+}
+
+.form__submit-btn {
+  margin: -1px;
+  padding: var(--_input-padding);
+  padding-inline: var(--_btn-padding-x);
+  z-index: 1;
+
+  cursor: pointer;
+  background: var(--_gradient-pink);
+  border: 0;
+  border-radius: var(--_input-radius);
+
+  grid-area: 1 / 3 / 2 / 4;
+}
+.form__submit-btn:hover {
+  background: #f8cccd;
+  box-shadow: 0px 15px 25px -5px hsl(0, 74%, 74%);
+}
+
+.form__error-msg {
+  padding: var(--_input-padding);
+
+  font-weight: var(--_fw-semibold);
+  color: var(--_red-500);
+  text-align: initial;
+
+  grid-area: 2 / 1 / 3 / -1;
+}

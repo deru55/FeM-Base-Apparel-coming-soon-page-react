@@ -1,7 +1,7 @@
-import LogoIcon from "../icons/LogoIcon";
+import logoIcon from "../../assets/images/logo.svg";
 
 const Logo = () => {
-  return <LogoIcon />;
+  return <img src={logoIcon} alt="Base Apparel" className="header__logo" />;
 };
 
 export default Logo;
